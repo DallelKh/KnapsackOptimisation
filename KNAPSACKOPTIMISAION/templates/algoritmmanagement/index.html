@@ -1,6 +1,9 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html>
 <head>
+    {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -8,15 +11,15 @@
 
     <title>Projet d'Optimisation Combinatoire</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-
+    <link rel="stylesheet" href="{% static 'algoritmmanagement/css/bootstrap.css' %}">
+    {% load static %}
     <!-- Main Stylesheet CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'algoritmmanagement/style.css' %}">
 
 
 
     <!-- end awesome icons -->
-    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="{% static 'algoritmmanagement/css/font-awesome.css' %}">
 
 
     
@@ -89,8 +92,8 @@
                         <h2> Methodes Approchées </h2>
                         <p>
                             Vous pouvez derouler l'algorithme qui donne la solution exacte sous deux variantes
-                            <li>Heuristique1</li>
-                            <li>Heuristique2</li>
+                            <li>Heuristique1 de voisinage</li>
+                            <li>Heuristique2 type2</li>
                         </p>
                     </div>
                 </div>
@@ -166,12 +169,12 @@
     <!-- SECTION CLOSED -->
 
     <!-- le menu deroulant -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{% static 'algoritmmanagement/js/jquery.js' %}"></script>
+    <script src="{% static 'algoritmmanagement/js/bootstrap.js' %}"></script>
+    <script src="{% static 'algoritmmanagement/js/custom.js' %}"></script>
 
      <!-- Animation Scripts -->
-    <script src="js/scrollReveal.js"></script>
+    <script src="{% static 'algoritmmanagement/js/scrollReveal.js' %}"></script>
     
     <script>
         (function ($) {
