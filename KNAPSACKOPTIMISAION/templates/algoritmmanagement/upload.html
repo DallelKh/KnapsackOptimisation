@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>Projet d'Optimisation Combinatoire</title>
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="{% static 'algoritmmanagement/css/bootstrap.css' %}">
+    
+    {% load static %}
+    <!-- Main Stylesheet CSS -->
+    <link rel="stylesheet" href="{% static 'algoritmmanagement/style.css' %}">
+
+
+
+    <!-- end awesome icons -->
+    <link rel="stylesheet" href="{% static 'algoritmmanagement/css/font-awesome.css' %}">
+
+
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body data-spy="scroll" data-offset="25">
+
+
+    <!--/HEADER SECTION -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        
+                        <a href="index.html" class="navbar-brand">Knapsack <br> <span class="slogo">Problem <span></a>
+                    </div><!-- end navbar-header -->
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a data-scroll href="#home" class="int-collapse-menu">Home</a></li>
+                            <li><a data-scroll href="#features" class="int-collapse-menu">Les Algorithmes Disponibles ?</a></li>
+                            <li><a data-scroll href="#about" class="int-collapse-menu">Executer Un Algorithme</a></li>
+
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div><!--/.container-fluid -->
+            </div>
+        </div><!-- end container -->
+    </header><!-- end header -->
+
+    <section class="contact-wrapper">
+        <span class="empty">
+            <br> <br> <br> <br> <br> <br> <br>
+
+        </span>
+        <div class="title text-center" id="home">
+            <h2>Catalog des Algorithmes d'optimisation du problème du sac à dos</h2>
+            <p>Voici les implementation disponibles </p>
+            <hr>
+        </div><!-- end title -->
+        <div class="container">
+
+            <div class="col-sm-4">
+                <div class="brand-content wow fadeIn animated" style="visibility: visible; animation:normal; -webkit-animation: fadeIn 700ms 300ms;">
+                    <i class="fa fa-lightbulb-o fa-4x pull-left"></i>
+                    <div class="media-body">
+                        <h2>Methodes Exactes </h2>
+                        <p>
+                            Vous pouvez derouler l'algorithme qui donne la solution exacte sous deux variantes
+                            <ul><li>Branch and Bound avec elagage</li>
+                                <li>Branch and Bound sans elagage</li>
+                            <li>Algo Naiive</li>
+                            <li>Programation dynamique</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-sm-4">
+                <div class="brand-content wow fadeIn animated" style="visibility: visible; animation:normal;-webkit-animation: fadeIn 700ms 500ms;">
+                    <i class="fa fa-lightbulb-o fa-4x pull-left"></i>
+                    <div class="media-body">
+                        <h2>MetaHuristiques </h2>
+                        <p>.implementation disponibles
+                            <ul>
+                                <li>Recuit Simule</li>
+                                <li>ICA : Imperialist Competitive Algorithme</li>
+                                <li>Fireworks Algorithm</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="brand-content wow fadeIn animated" style="visibility: visible;animation:normal; -webkit-animation: fadeIn 700ms 400ms;">
+                    <i class="fa fa-lightbulb-o fa-4x pull-left"></i>
+                    <div class="media-body">
+                        <h2> Methodes Approchées </h2>
+                        <p>
+                            Vous pouvez derouler l'algorithme sous trois variantes
+                            <ul>
+                            <li>Heuristique1 de moyenne</li>
+                            <li>Heuristique2 type2</li>
+                            <li>Heuristique2 type3</li>
+
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container">
+            <div >
+                <div class="brand-content wow fadeIn animated" style="visibility: visible;animation:normal; -webkit-animation: fadeIn 700ms 400ms;">
+                    <i class="fa fa-lightbulb-o fa-4x pull-left"></i>
+                    <div class="media-body">
+                        <h2> Methode hybride originale </h2>
+                        <p>
+                            cest une combinaison entre 
+                            <ul>
+                            <li>Recuit Simule</li>
+                            <li>ICA</li>
+                            
+
+                        </ul>
+                        on a deux schema haut/bas
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!--/ footer SECTION -->
+    <section id="contact" class="contact-wrapper">
+        <div class="title text-center">
+            <h2>deroulement /execution </h2>
+            <p>choisir les parametres d'execution et l'instance a utiliser </p>
+            <hr>
+        </div><!-- end title -->
+        <div class="contact_tab text-center">
+            <ul id="myTab" class="container text-center nav nav-tabs" role="tablist">
+                <li class="active"><a href="#tab1" role="tab" data-toggle="tab">Execution Automatique</a></li>
+                <li><a href="#tab2" role="tab" data-toggle="tab">Execution Parametrable</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="tab1">
+                    <div class="container">              
+
+                        {% block content %}
+                          <form id="survey-form" class="col-25" method="post" enctype="multipart/form-data" data-scroll-reveal="enter from the bottom after 0.4s">
+                            {% csrf_token %}
+                            
+                            <label for="improve" id="improve">________________Veuillez Choisir l'Algorithme et Introduire le poids max du sac à dos et l'instance______________</label>
+                            <br><br>
+                            
+                                <select  >
+                                    <option>B&B</option>
+                                    <option>Fireworks</option>
+                                    <option>Imperialist cometitive A</option>
+                                  </select>
+                                  <br><br>
+                                  <input type="text" placeholder="Poids_max"> 
+                                  <br> 
+                                  <input type="file" name="document" >
+                                    <br>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                            <button type="submit">Executer!</button>
+                            </div>
+                          </form>
+                          {% if uploaded_file_url %}
+                          <form  id="survey-form1" class="col-45"  method="post"  data-scroll-reveal="enter from the bottom after 1s">
+                          
+                                                       
+                       
+                                
+                                <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+                                <p>Tempsexec: {{ tempsexec }}</p>
+    
+                                <p>Gain: {{ gain }}</p>
+                                <p>Poids: {{ poids }}</p>
+
+                        
+                        </form>
+ 
+ 
+                          {% endif %}
+                        
+                        {% endblock %}
+
+                       
+                    </div> <!-- End Container -->
+                </div><!-- End Tab Pane -->
+                <!-- /Google Map -->
+                <div class="tab-pane fade" id="tab2">
+                   
+                     
+                      <div class="tab-pane fade in active" id="tab1">
+                        <div class="container">
+                            <p>choisir Algorithme et instance </p>
+                            <div id="message"></div>
+                            <form id="contactform" action="contact.php" name="contactform" method="post" data-scroll-reveal="enter from the bottom after 0.4s">
+    
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <select class="selectpicker" data-style="btn-warning">
+                                        <option>B&B</option>
+                                        <option>Fireworks</option>
+                                        <option>Imperialist cometitive A</option>
+                                      </select>
+
+                                      <select class="selectpicker" >
+                                        <option>petite instance</option>
+                                        <option>grande instance</option>
+                                      </select>
+                                    <input type="text" name="subject" id="ii" class="form-control" placeholder="introduire les parametres">
+                                    <button type="button" onclick="alert('execution launched!')">Executer!</button>
+
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="resultat de l'execution"></textarea>
+                                </div>
+    
+                            </form> <!-- End Form -->
+                        </div> <!-- End Container -->
+                    </div><!-- End Tab Pane -->
+
+                </div>
+            </div><!-- /end my tab content -->
+
+        </div><!-- /contact_tab -->
+        
+
+    </section><!--/ Contact End -->
+    <!--/ FOOTER SECTION-->
+    <section id="footer" class="footer-wrapper text-center">
+        <div class="container">
+            <div class="title text-center" data-scroll-reveal="enter from the bottom after 0.5s">
+                <div class="aligncenter">
+                    <a href="upload.html" class="navbar-brand" center>Equipe 10 SIQ3 <br> <span class="slogo"> <span></a>
+                    <a data-scroll-reveal="enter from the bottom after 0.3s" href="#home"><i class="fa fa-angle-up"></i></a>
+                </div>    <!-- end title -->
+            </div>
+        </div>  <!-- end container -->
+    </section><!--/ Footer  End -->
+    <!-- SECTION CLOSED -->
+
+    <!-- le menu deroulant -->
+    <script src="{% static 'algoritmmanagement/js/jquery.js' %}"></script>
+    <script src="{% static 'algoritmmanagement/js/bootstrap.js' %}"></script>
+    <script src="{% static 'algoritmmanagement/js/custom.js' %}"></script>
+
+     <!-- Animation Scripts -->
+    <script src="{% static 'algoritmmanagement/js/scrollReveal.js' %}"></script>
+    
+    <script>
+        (function ($) {
+            "use strict"
+            window.scrollReveal = new scrollReveal();
+        })(jQuery);
+    </script>
+
+</body>
+</html>
