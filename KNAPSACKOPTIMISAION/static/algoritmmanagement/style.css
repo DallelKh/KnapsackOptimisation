@@ -1,4 +1,55 @@
 	
+	
+#survey-form1{
+	border-radius: 5px;
+   padding: 50px;
+   border: 1px solid;
+
+   
+ }	
+
+.col-45 {
+	float: center;
+	width:70%;
+	margin: auto;}
+  
+ #survey-form{
+   border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 40px;
+  
+}
+
+ /* Floating column for labels: 25% width */
+.col-25 {
+  float: center;
+  width: 70%;
+	margin: auto;
+}
+
+.col-25 label {
+	
+display: inline-block;
+    text-align:center;
+    
+	border: 1px solid #818181;
+	
+   
+  
+}
+.col-25 input {
+	
+	display: inline-block;
+		text-align:center;
+		
+		border: 1px solid #818181;
+		
+	   
+	  
+	}
+
+/* Floating column for inputs: 75% width */
+
 
 /*	################################################################
 	2. SKELETON

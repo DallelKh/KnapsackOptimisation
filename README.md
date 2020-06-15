@@ -3,3 +3,4 @@ simple web app for execution of diffrent combinatorial optimization algorithms o
 1)Branch & Bound
 2)Heuristics
 3)Meta-Heuristics
+4)hybride algorithm
