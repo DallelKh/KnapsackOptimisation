@@ -1,0 +1,192 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>Projet d'Optimisation Combinatoire</title>
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="{% static 'algoritmmanagement/css/bootstrap.css' %}">
+    
+    {% load static %}
+    <!-- Main Stylesheet CSS -->
+    <link rel="stylesheet" href="{% static 'algoritmmanagement/style.css' %}">
+
+
+
+    <!-- end awesome icons -->
+    <link rel="stylesheet" href="{% static 'algoritmmanagement/css/font-awesome.css' %}">
+
+
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body data-spy="scroll" data-offset="25">
+
+
+    <!--/HEADER SECTION -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        
+                        <a href="index.html" class="navbar-brand">Knapsack <br> <span class="slogo">Problem <span></a>
+                    </div><!-- end navbar-header -->
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a data-scroll href="#home" class="int-collapse-menu">Home</a></li>
+                            <li><a data-scroll href="#algo" class="int-collapse-menu">Les Algorithmes Disponibles ?</a></li>
+                            <li><a data-scroll href="#exec" class="int-collapse-menu">Executer Un Algorithme</a></li>
+
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div><!--/.container-fluid -->
+            </div>
+        </div><!-- end container -->
+    </header><!-- end header -->
+
+    <section class="contact-wrapper" id="algo">
+        <span class="empty">
+            <br> <br> <br> <br> <br> <br> <br>
+
+        </span>
+        <div class="title text-center" id="home">
+            <h2>Catalog des Algorithmes d'optimisation du problème du sac à dos</h2>
+            <p>Voici les implementation disponibles </p>
+            <hr>
+        </div><!-- end title -->
+        <div class="container">
+
+            <div class="col-sm-5">
+                <div class="brand-content wow fadeIn animated" style="visibility: visible; animation:normal; -webkit-animation: fadeIn 700ms 300ms;">
+                    <i class="fa fa-lightbulb-o fa-4x pull-left"></i>
+                        <h2>Methodes Exactes </h2>
+                        <p>
+                            
+                            <ul><li>Branch and Bound avec elagage</li>
+                                <li>Branch and Bound sans elagage</li>
+                            
+                                <li>Programation dynamique</li>
+                        </ul>
+                        </p>
+                </div>
+            </div>
+            
+
+            <div class="col-sm-5">
+                <div class="brand-content wow fadeIn animated" style="visibility: visible; animation:normal;-webkit-animation: fadeIn 700ms 500ms;">
+                    <i class="fa fa-lightbulb-o fa-4x pull-left"></i>
+                        <h2>Meta-Huristiques </h2>
+                        
+                            <ul>
+                                <li>Recuit Simule</li>
+                                <li>ICA : Imperialist Competitive Algorithme</li>
+                                <li>Fireworks Algorithm</li>
+                            </ul>
+                        </p>
+                </div>
+            </div>
+        
+
+            <div class="col-sm-5">
+                <div class="brand-content wow fadeIn animated" style="visibility: visible;animation:normal; -webkit-animation: fadeIn 700ms 400ms;">
+                    <i class="fa fa-lightbulb-o fa-4x pull-left"></i>
+                        <h2> Methodes Approchées </h2>
+                        
+                            <ul>
+                            <li>Heuristique1 : Tri par valeur </li>
+                            <li>Heuristique2 : Tri par poids </li>
+                            <li>Heuristique3 : Tri par densite</li>
+
+                        </ul>
+                        </p>
+                </div>
+            </div>
+            
+      
+  
+            <div class="col-sm-5">
+                <div class="brand-content wow fadeIn animated" style="visibility: visible;animation:normal; -webkit-animation: fadeIn 700ms 400ms;">
+                    <i class="fa fa-lightbulb-o fa-4x pull-left"></i>
+                        <h2> Methode hybride originale </h2>
+                        <p>
+                            C 'est une combinaison entre Recuit simule et ICA,on a implementé deux schemas                            <ul>
+                            <li>Hybridation Low </li>
+                            <li>Hybridation  High </li>
+                            
+
+                        </ul>
+                        
+                        
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--/ footer SECTION -->
+    <section id="contact" class="contact-wrapper" >
+        <div class="title text-center" id="exec">
+            <h2>Deroulement / Execution </h2>
+            <p>Choisir le Type d'execution</p>
+            <hr>
+        </div><!-- end title -->
+        <div class="contact_tab text-center" >
+            <ul id="myTab" class="container text-center nav nav-tabs" role="tablist">
+
+                <li ><a href="#tab1" role="tab" data-toggle="tab">Execution Automatique</a></li>
+                <li class="active">  <a href="#o" role="tab" data-toggle="tab"></a> </li>
+                <li><a href="#tab2" role="tab" data-toggle="tab">Execution Parametrable</a></li>
+            </ul>
+
+            {% block content %}
+            {% endblock %}
+
+        </div><!-- /contact_tab -->
+        
+
+    </section><!--/ Contact End -->
+    <!--/ FOOTER SECTION-->
+    <section id="footer" class="footer-wrapper text-center">
+        <div class="container">
+            <div class="title text-center" data-scroll-reveal="enter from the bottom after 0.5s">
+                <div class="aligncenter">
+                    <a href="upload.html" class="navbar-brand" center>Equipe 10 SIQ3 <br> <span class="slogo"> <span></a>
+                    <a data-scroll-reveal="enter from the bottom after 0.3s" href="#home"><i class="fa fa-angle-up"></i></a>
+                </div>    <!-- end title -->
+            </div>
+        </div>  <!-- end container -->
+    </section><!--/ Footer  End -->
+    <!-- SECTION CLOSED -->
+
+    <!-- le menu deroulant -->
+    <script src="{% static 'algoritmmanagement/js/jquery.js' %}"></script>
+    <script src="{% static 'algoritmmanagement/js/bootstrap.js' %}"></script>
+    <script src="{% static 'algoritmmanagement/js/custom.js' %}"></script>
+
+     <!-- Animation Scripts -->
+    <script src="{% static 'algoritmmanagement/js/scrollReveal.js' %}"></script>
+    
+    <script>
+        (function ($) {
+            "use strict"
+            window.scrollReveal = new scrollReveal();
+        })(jQuery);
+    </script>
+
+</body>
+</html>
